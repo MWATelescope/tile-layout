@@ -3,8 +3,10 @@ __author__ = 'andrew'
 import math
 import cabplot
 
-TILEFILE = 'config2.txt'
-PADFILE = 'pads-compact2.txt'
+TILEFILE = 'config1.txt'
+PADFILE = 'pads-compact3.txt'
+
+KEEPCURRENT = True
 
 TILES = []
 PADS = []
@@ -65,12 +67,16 @@ class Pad(object):
     """
     return len(self.inputs) < 8
 
-  def addtile(self, tileobj, fixlength=None):
+  def addtile(self, tileobj, fixlength=None, manual=True):
     """Add the given tile object to the input list.
 
        If fixlength is given (in metres), use that as the cable length instead of
        the straight-line distance between tile and pad (for manually forcing
        connections).
+
+       If manual is True (the default), or if a fixed length is supplied,
+       indicate by arrow color that the connection has
+       been manually chosen, not automatically picked by the algorithm.
     """
     if not self.freeslot():
       print "No free slots in pad %s for tile %s" % (self.name, tileobj.name)
@@ -92,7 +98,7 @@ class Pad(object):
     self.inputs[tileobj.name] = (tileobj, clen)
     CONNECTED.append(tileobj.name)
     print "Connected tile %s to pad %s with cable of %5.1f m" % (tileobj.name, self.name, clen)
-    if fixlength is not None:
+    if manual or (fixlength is not None):
       cabplot.update(pad=self, tname=tileobj.name, fixed=True)
     else:
       cabplot.update(pad=self, tname=tileobj.name, fixed=False)
@@ -158,7 +164,7 @@ def connectall():
     maxtile, maxlen, maxtilepad = findlongest()
     if maxtile is None:
       break
-    maxtilepad.addtile(maxtile)
+    maxtilepad.addtile(maxtile, manual=False)
     cabplot.visual.sleep(DELAY)
 
   print "All tiles connected"
@@ -205,24 +211,39 @@ def prstats():
   ctotal = 0.0
   froundtotal = 0.0
   croundtotal = 0.0
+  newtotal = 0.0
   flinks = 0
   rflinks = 0
+  oldlinkstotal = 0
   for pad in PADS:
     if pad.enabled:
       print pad
       cpad = 0.0
       fpad = 0.0
       pflink = 0
+      newlen = 0.0
+      oldlinks = 0
       for tname, tdata in pad.inputs.items():
         clen = tdata[1]
-        if clen <= 500:
+        if clen <= 525:
           cpad += clen
         else:
           fpad += clen
           flinks += 1
+        if tname.startswith('Tile'):
+          tnum = int(''.join([c for c in tname if c.isdigit()]))
+          rnum,slotnum = divmod(tnum,10)
+          oldpad = PDICT['Rx%d' % rnum]
+          if (oldpad.east == pad.east) and (oldpad.north == pad.north):
+            oldlinks += 1
+          else:
+            newlen += clen
+        else:
+          newlen += clen
+
       print "  Exact cable length totals: %4.3f km of copper, %4.3f km of fibre" % (cpad/1000, fpad/1000)
       clen = pad.maxlen()[1]
-      if clen <= 500:
+      if clen <= 525:
         croundtotal += clen*8
         print "  Equal length cables totals: %4.3f km of COPPER." % (clen*8/1000,)
       else:
@@ -231,41 +252,99 @@ def prstats():
         print "  Equal length cables totals: %4.3f km of FIBRE." % (clen*8/1000,)
       ctotal += cpad
       ftotal += fpad
+      newtotal += newlen
+      oldlinkstotal += oldlinks
+      print "  %d existing tile connections re-used, %4.3f km of new cable to be found" % (oldlinks, newlen/1000)
   print
   print "Totals for the whole array:"
   print "   Exact lengths   - %4.3f km of COPPER, %4.3f km of FIBRE in %d links" % (ctotal/1000, ftotal/1000, flinks)
   print "   Rounded lengths - %4.3f km of COPPER, %4.3f km of FIBRE in %d links" % (croundtotal/1000, froundtotal/1000, rflinks)
+  print "   %d existing tile connections re-used, %4.3f km of new cables to be found" % (oldlinkstotal, newtotal/1000)
 
 
 load()
 plot(forever=False)
 
+
+
 if (TILEFILE == 'config1.txt') and ('pads-compact' in PADFILE):   # Any case with a compact configuration and receivers moved in
   print "Force Rx12, Rx13, Rx14 to be connected to the East hexagon (leaving four copper tiles on that hexagon)."
 
   pad = PDICT['Rx12']
-  for tname in ['HE29', 'HE33', 'HE35', 'HE31', 'HE13', 'HE17', 'HE15', 'HE27', ]:
+  for tname in ['HN29', 'HN33', 'HN35', 'HN31', 'HN13', 'HN17', 'HN15', 'HN27', ]:
     pad.addtile(TDICT[tname])
     cabplot.visual.sleep(DELAY)
   pad = PDICT['Rx13']
-  for tname in ['HE09', 'HE03', 'HE05', 'HE11', 'HE23', 'HE02', 'HE08', 'HE20', ]:
+  for tname in ['HN09', 'HN03', 'HN05', 'HN11', 'HN23', 'HN02', 'HN08', 'HN20', ]:
     pad.addtile(TDICT[tname])
     cabplot.visual.sleep(DELAY)
   pad = PDICT['Rx14']
-  for tname in ['HE04', 'HE06', 'HE12', 'HE24', 'HE18', 'HE16', 'HE28', 'HE32', ]:
+  for tname in ['HN04', 'HN06', 'HN12', 'HN24', 'HN18', 'HN16', 'HN28', 'HN32', ]:
     pad.addtile(TDICT[tname])
     cabplot.visual.sleep(DELAY)
   pad = PDICT['Rx16']
-  for tname in ['HE19', 'HE22', 'HE26', 'HE30', 'HE07', 'HE10', 'HE14', 'HE34', ]:
+  for tname in ['HN19', 'HN22', 'HN26', 'HN30', 'HN07', 'HN10', 'HN14', 'HN34', ]:
     pad.addtile(TDICT[tname])
     cabplot.visual.sleep(DELAY)
 
-elif (TILEFILE == 'config2.txt') and (PADFILE == 'pads-compact2.txt'):   # Extended configuration with Rx16 left on original pad
+elif (TILEFILE == 'config2.txt') and (('pads-compact2' in PADFILE) or ('pads-compact3' in PADFILE)):   # Extended configuration with Rx16 left on original pad
   print "Force longer cables and Rx16 for the 8 tiles on the far side of the airstrip"
-  pad = PDICT['Rx16']
+  if 'pads-compact2' in PADFILE:
+    pad = PDICT['Rx16']
+  else:
+    pad = PDICT['Rx10']
   for tname in ['LB_SW1', 'LB_SW2', 'LB_SW3', 'LB_SW4', 'LB_SW5', 'LB_SW6', 'LB_SW7', 'LB_SW8']:
     pad.addtile(TDICT[tname], fixlength=2650.0)
     cabplot.visual.sleep(DELAY)
+
+elif (TILEFILE == 'config1.txt') and (PADFILE == 'pads-verycompact.txt'):
+  pad = PDICT['Rx8a']
+  for tname in ['HN29', 'HN33', 'HN25', 'HN13', 'HN21', 'HN09', 'HN03', 'HN19']:
+    pad.addtile(TDICT[tname])
+    cabplot.visual.sleep(DELAY)
+
+  pad = PDICT['Rx9a']
+  for tname in ['HN35', 'HN31', 'HN17', 'HN15', 'HN27', 'HN05', 'HN11', 'HN23']:
+    pad.addtile(TDICT[tname])
+    cabplot.visual.sleep(DELAY)
+
+  pad = PDICT['Rx1a']
+  for tname in ['HN07', 'HN01', 'HN22', 'HN10', 'HN04', 'HN26', 'HN14', 'HN18']:
+    pad.addtile(TDICT[tname])
+    cabplot.visual.sleep(DELAY)
+
+  pad = PDICT['Rx2a']
+  for tname in ['HN30', 'HN34', 'HN36', 'HN06', 'HN16', 'HN32', 'HE19', 'HE22']:
+    pad.addtile(TDICT[tname])
+    cabplot.visual.sleep(DELAY)
+
+  pad = PDICT['Rx3a']
+  for tname in ['HE35', 'HE31']:
+    pad.addtile(TDICT[tname])
+    cabplot.visual.sleep(DELAY)
+
+  pad = PDICT['Rx4a']
+  for tname in ['HE15', 'HE27', 'HE33', 'HE17', 'HE11', 'HE23', 'HE29', 'HE20']:
+    pad.addtile(TDICT[tname])
+    cabplot.visual.sleep(DELAY)
+
+
+if KEEPCURRENT:    # Force existing tiles to connect to the receivers they are connected to now, if possible
+  for tname,tile in TDICT.items():
+    if tname.startswith('Tile'):
+      tnum = int(''.join([c for c in tname if c.isdigit()]))
+      rnum,slotnum = divmod(tnum,10)
+      pname = 'Rx%d' % rnum
+      if PDICT[pname].enabled:
+        PDICT[pname].addtile(tile)
+        cabplot.visual.sleep(DELAY)
+      else:
+        oldpad = PDICT[pname]
+        for newpad in PADS:
+          if (oldpad.east == newpad.east) and (oldpad.north == newpad.north) and (newpad.enabled):
+            newpad.addtile(tile)
+            cabplot.visual.sleep(DELAY)
+
 
 
 connectall()

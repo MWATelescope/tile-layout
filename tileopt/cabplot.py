@@ -8,6 +8,8 @@ pdict = {}
 simplist = []
 complist = []
 
+ARROWWIDTH = 1.0
+
 def getdipole(cpos=None):
   width = 0.35  # Center to edge of batwing
   height = 0.4  # Top of batwing corner to ground
@@ -113,11 +115,20 @@ def plot(tiles=None, pads=None):
     pobj = visual.box(pos=(pad.east, pad.north, 0.0), length=1.0, height=2.0, width=1.0, color=color.white)
     if not pad.enabled:
       pobj.color = (0.5,0.5,0.5)
-    pobj.label = visual.label(pos=pobj.pos, text=pad.name, xoffset=10, yoffset=10, box=False, line=False, opacity=0.2)
+    num = int(''.join([c for c in pad.name if c.isdigit()]))
+    if divmod(num,2)[1] == 0:
+      xoffset = 12
+    else:
+      xoffset = -12
+    if pad.name.endswith('a'):
+      yoffset = -8
+    else:
+      yoffset = 8
+    pobj.label = visual.label(pos=pobj.pos, text=pad.name, xoffset=xoffset, yoffset=yoffset, box=False, line=False, opacity=0.2)
     pobj.cables = {}
     for tname, tdata in pad.inputs.items():
       tpos = visual.vector(tdata[0].east, tdata[0].north, 0.0)
-      cobj = visual.arrow(pos=pobj.pos, axis=(tpos-pobj.pos), shaftwidth=1, fixedwidth=True)
+      cobj = visual.arrow(pos=pobj.pos, axis=(tpos-pobj.pos), shaftwidth=ARROWWIDTH, fixedwidth=True)
       pobj.cables[tname] = cobj
     pdict[pad.name] = pobj
 
@@ -133,7 +144,7 @@ def update(pad=None, tname=None, fixed=False):
     color = visual.color.white
   if (tname is not None) and (tname in pad.inputs):
     tpos = visual.vector(pad.inputs[tname][0].east, pad.inputs[tname][0].north, 0.0)
-    cobj = visual.arrow(pos=pobj.pos, axis=(tpos-pobj.pos), shaftwidth=1, fixedwidth=True, color=color)
+    cobj = visual.arrow(pos=pobj.pos, axis=(tpos-pobj.pos), shaftwidth=ARROWWIDTH, fixedwidth=True, color=color)
     pobj.cables[tname] = cobj
   else:
     for cable in pobj.cables.values():
@@ -141,7 +152,7 @@ def update(pad=None, tname=None, fixed=False):
     pobj.cables = {}
     for tname, tdata in pad.inputs.items():
       tpos = visual.vector(tdata[0].east, tdata[0].north, 0.0)
-      cobj = visual.arrow(pos=pobj.pos, axis=(tpos-pobj.pos), shaftwidth=1, fixedwidth=True)
+      cobj = visual.arrow(pos=pobj.pos, axis=(tpos-pobj.pos), shaftwidth=ARROWWIDTH, fixedwidth=True)
       pobj.cables[tname] = cobj
 
 
