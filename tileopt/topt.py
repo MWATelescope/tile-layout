@@ -3,7 +3,7 @@ __author__ = 'andrew'
 import math
 import cabplot
 
-TILEFILE = 'config1.txt'
+TILEFILE = 'config2.txt'
 PADFILE = 'pads-compact3.txt'
 
 KEEPCURRENT = True
@@ -65,7 +65,10 @@ class Pad(object):
   def freeslot(self):
     """Returns true if there is a free input.
     """
-    return len(self.inputs) < 8
+    if 'DP' in self.name.upper():
+      return True
+    else:
+      return len(self.inputs) < 8
 
   def addtile(self, tileobj, fixlength=None, manual=True):
     """Add the given tile object to the input list.
@@ -225,7 +228,7 @@ def prstats():
       oldlinks = 0
       for tname, tdata in pad.inputs.items():
         clen = tdata[1]
-        if clen <= 525:
+        if clen <= 525 and 'RX' in pad.name.upper():
           cpad += clen
         else:
           fpad += clen
@@ -243,7 +246,7 @@ def prstats():
 
       print "  Exact cable length totals: %4.3f km of copper, %4.3f km of fibre" % (cpad/1000, fpad/1000)
       clen = pad.maxlen()[1]
-      if clen <= 525:
+      if clen <= 525 and 'RX' in pad.name.upper():
         croundtotal += clen*8
         print "  Equal length cables totals: %4.3f km of COPPER." % (clen*8/1000,)
       else:
@@ -254,7 +257,13 @@ def prstats():
       ftotal += fpad
       newtotal += newlen
       oldlinkstotal += oldlinks
-      print "  %d existing tile connections re-used, %4.3f km of new cable to be found" % (oldlinks, newlen/1000)
+      if 'RX' in pad.name.upper():
+        print "  %d existing tile connections re-used, %4.3f km of new cable to be found" % (oldlinks, newlen/1000)
+      else:
+        trlen = math.sqrt(pad.east*pad.east + pad.north*pad.north)
+        print "  Trunk length to core is %4.3fkm long, %d tiles wide" % (trlen/1000, len(pad.inputs.keys()))
+        cabplot.trunk(pad)
+
   print
   print "Totals for the whole array:"
   print "   Exact lengths   - %4.3f km of COPPER, %4.3f km of FIBRE in %d links" % (ctotal/1000, ftotal/1000, flinks)
@@ -335,16 +344,15 @@ if KEEPCURRENT:    # Force existing tiles to connect to the receivers they are c
       tnum = int(''.join([c for c in tname if c.isdigit()]))
       rnum,slotnum = divmod(tnum,10)
       pname = 'Rx%d' % rnum
-      if PDICT[pname].enabled:
+      if PDICT[pname].enabled and PDICT[pname].freeslot():
         PDICT[pname].addtile(tile)
         cabplot.visual.sleep(DELAY)
       else:
         oldpad = PDICT[pname]
         for newpad in PADS:
-          if (oldpad.east == newpad.east) and (oldpad.north == newpad.north) and (newpad.enabled):
+          if (oldpad.east == newpad.east) and (oldpad.north == newpad.north) and (newpad.enabled) and (newpad.freeslot()):
             newpad.addtile(tile)
             cabplot.visual.sleep(DELAY)
-
 
 
 connectall()

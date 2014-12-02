@@ -155,6 +155,12 @@ def update(pad=None, tname=None, fixed=False):
       cobj = visual.arrow(pos=pobj.pos, axis=(tpos-pobj.pos), shaftwidth=ARROWWIDTH, fixedwidth=True)
       pobj.cables[tname] = cobj
 
+def trunk(pad=None):
+  pobj = pdict[pad.name]
+  trcolor = (0.0,0.9,0.9)
+  trobj = visual.arrow(pos=visual.vector(0,0,0), axis=pobj.pos, shaftwidth=ARROWWIDTH*3, fixedwidth=True, color=trcolor)
+  trobj.visible = True
+
 
 def processClick(event):
   global tlabel
