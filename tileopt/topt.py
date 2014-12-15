@@ -3,10 +3,21 @@ __author__ = 'andrew'
 import math
 import cabplot
 
-TILEFILE = 'config2.txt'
-PADFILE = 'pads-compact3.txt'
+TILEFILE = 'config1.txt'
+PADFILE = 'pads-verycompact.txt'
 
 KEEPCURRENT = True
+
+#Nov 2014 lightning strike
+#LIGHTNING = [18,28,52,54,55,57,71,72,73,74,75,76,76,78,81,83,84,87,88,91,92,93,94,95,96,101,103,104,108,111,117,121,126,128,131,132,134,138,141,143,144,145,151,153,166,167]
+#BADLIGHTNING = [76,78,101,103,104,108,111,131,161,167]
+
+#Dec 2013 lightning strike
+#LIGHTNING = [47, 68, 81, 83, 84, 85, 86, 113, 115, 117, 121, 122, 125, 126, 131, 133, 136, 138, 144]
+#BADLIGHTNING = [131]
+
+LIGHTNING = []
+BADLIGHTNING = []
 
 TILES = []
 PADS = []
@@ -15,7 +26,7 @@ PDICT = {}
 LMATRIX = {}
 CONNECTED = []
 
-DELAY = 0.1
+DELAY = 0.001
 
 class Pad(object):
   """Represents a single receiver pad, which can handle up to 8 inputs from tiles.
@@ -70,7 +81,7 @@ class Pad(object):
     else:
       return len(self.inputs) < 8
 
-  def addtile(self, tileobj, fixlength=None, manual=True):
+  def addtile(self, tileobj, fixlength=None, manual=True, color=None):
     """Add the given tile object to the input list.
 
        If fixlength is given (in metres), use that as the cable length instead of
@@ -102,9 +113,9 @@ class Pad(object):
     CONNECTED.append(tileobj.name)
     print "Connected tile %s to pad %s with cable of %5.1f m" % (tileobj.name, self.name, clen)
     if manual or (fixlength is not None):
-      cabplot.update(pad=self, tname=tileobj.name, fixed=True)
+      cabplot.update(pad=self, tname=tileobj.name, fixed=True, color=color)
     else:
-      cabplot.update(pad=self, tname=tileobj.name, fixed=False)
+      cabplot.update(pad=self, tname=tileobj.name, fixed=False, color=color)
     return True
 
   def findclosest(self):
@@ -345,7 +356,16 @@ if KEEPCURRENT:    # Force existing tiles to connect to the receivers they are c
       rnum,slotnum = divmod(tnum,10)
       pname = 'Rx%d' % rnum
       if PDICT[pname].enabled and PDICT[pname].freeslot():
-        PDICT[pname].addtile(tile)
+        tid = int(tname[4:])
+        if tid in BADLIGHTNING:
+          ccolor = (1.0,0.0,0.0)
+        elif tid in LIGHTNING:
+          ccolor = (1.0,0.8,0.0)
+        elif len(BADLIGHTNING):
+          ccolor = (1.0,1.0,1.0)
+        else:
+          ccolor = None
+        PDICT[pname].addtile(tile, color=ccolor)
         cabplot.visual.sleep(DELAY)
       else:
         oldpad = PDICT[pname]

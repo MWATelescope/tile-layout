@@ -136,15 +136,23 @@ def plot(tiles=None, pads=None):
   visual.scene.bind('click keydown', processClick)
 
 
-def update(pad=None, tname=None, fixed=False):
+def update(pad=None, tname=None, fixed=False, color=None):
   pobj = pdict[pad.name]
   if fixed:
-    color = visual.color.orange
+    ccolor = visual.color.orange
   else:
-    color = visual.color.white
+    ccolor = visual.color.white
+  if (color is not None):
+    ccolor = color
+    if (color != (1.0,1.0,1.0)):
+      wmult = 3
+    else:
+      wmult = 1
+  else:
+    wmult = 1
   if (tname is not None) and (tname in pad.inputs):
     tpos = visual.vector(pad.inputs[tname][0].east, pad.inputs[tname][0].north, 0.0)
-    cobj = visual.arrow(pos=pobj.pos, axis=(tpos-pobj.pos), shaftwidth=ARROWWIDTH, fixedwidth=True, color=color)
+    cobj = visual.arrow(pos=pobj.pos, axis=(tpos-pobj.pos), shaftwidth=ARROWWIDTH*wmult, fixedwidth=True, color=ccolor)
     pobj.cables[tname] = cobj
   else:
     for cable in pobj.cables.values():
@@ -152,7 +160,7 @@ def update(pad=None, tname=None, fixed=False):
     pobj.cables = {}
     for tname, tdata in pad.inputs.items():
       tpos = visual.vector(tdata[0].east, tdata[0].north, 0.0)
-      cobj = visual.arrow(pos=pobj.pos, axis=(tpos-pobj.pos), shaftwidth=ARROWWIDTH, fixedwidth=True)
+      cobj = visual.arrow(pos=pobj.pos, axis=(tpos-pobj.pos), shaftwidth=ARROWWIDTH*wmult, fixedwidth=True, color=ccolor)
       pobj.cables[tname] = cobj
 
 def trunk(pad=None):
