@@ -10,6 +10,9 @@ complist = []
 
 ARROWWIDTH = 1.0
 
+seltile = None
+tlabel = None
+
 def getdipole(cpos=None):
   width = 0.35  # Center to edge of batwing
   height = 0.4  # Top of batwing corner to ground
@@ -108,8 +111,9 @@ def plot(tiles=None, pads=None):
 #  aaxislabel = visual.text(text='Up', pos=(0,20,80), height=40, depth=10, color=color.blue)
 
   for tile in tiles:
-    complist += gettile(cpos=(tile.east, tile.north, 0.0))
+#    complist += gettile(cpos=(tile.east, tile.north, 0.0))
     simplist.append(visual.box(pos=(tile.east, tile.north, 0.0), axis=(0,0,1), height=5.0, width=5.0, length=0.2, color=color.green))
+    simplist[-1].name = tile.name
 
   for pad in pads:
     pobj = visual.box(pos=(pad.east, pad.north, 0.0), length=1.0, height=2.0, width=1.0, color=color.white)
@@ -124,7 +128,8 @@ def plot(tiles=None, pads=None):
       yoffset = -8
     else:
       yoffset = 8
-    pobj.label = visual.label(pos=pobj.pos, text=pad.name, xoffset=xoffset, yoffset=yoffset, box=False, line=False, opacity=0.2)
+#    pobj.label = visual.label(pos=pobj.pos, text=pad.name, xoffset=xoffset, yoffset=yoffset, box=False, line=False, opacity=0.2)
+    pobj.label = visual.text(pos=(pobj.pos.x+xoffset, pobj.pos.y+yoffset, pobj.pos.z+10), text=pad.name, height=5)
     pobj.cables = {}
     for tname, tdata in pad.inputs.items():
       tpos = visual.vector(tdata[0].east, tdata[0].north, 0.0)
@@ -145,7 +150,8 @@ def update(pad=None, tname=None, fixed=False, color=None):
   if (color is not None):
     ccolor = color
     if (color != (1.0,1.0,1.0)):
-      wmult = 3
+#      wmult = 3   # only useful for plots showing lightning
+      wmult = 1
     else:
       wmult = 1
   else:
@@ -171,7 +177,7 @@ def trunk(pad=None):
 
 
 def processClick(event):
-  global tlabel
+  global seltile, tlabel
   try:      # Key pressed:
     s = event.key
     if s == 'c':
@@ -187,6 +193,18 @@ def processClick(event):
   except AttributeError:             # Mouse clicked:
     clickedpos = event.pickpos   # The 3D position on the surface of the object clicked on
     if clickedpos:
-      visual.scene.center = clickedpos  # Change the camera cenre position
+      visual.scene.center = clickedpos  # Change the camera centre position
+    ob = event.pick
+    try:    
+      name = ob.name
+      if seltile is not None:
+        seltile.color = color.green
+        tlabel.visible = False
+        del tlabel
+      seltile = ob
+      seltile.color = color.red
+      tlabel = visual.text(pos=(seltile.pos.x, seltile.pos.y, seltile.pos.z+10), text=name, height=5)
+    except AttributeError:
+      pass
 
 
