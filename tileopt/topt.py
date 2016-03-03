@@ -1,11 +1,14 @@
 __author__ = 'andrew'
 
 import math
+import time
+
 import cabplot
 
 TILEFILE = 'config-compact.txt'
 PADFILE = 'pads-verycompact.txt'
 OUTFILE = 'topt-run.txt'
+CSVFILE = 'topt-run.csv'
 
 KEEPCURRENT = True
 
@@ -267,6 +270,11 @@ def prstats():
     ofhist[flavor] = 0
   fibrelist = []
   outf = open(OUTFILE, 'w')
+  csvf = open(CSVFILE, 'w')
+  header = "Tile optimisation run at %s\nTiles=%s, pad configuration=%s\n\n" % (time.ctime(), TILEFILE, PADFILE)
+  print header
+  outf.write(header)
+  csvf.write('# Run at %s, Tiles=%s, Pads=%s\n' % (time.ctime(), TILEFILE, PADFILE))
   for pad in PADS:
     if pad.enabled:
       print pad
@@ -294,8 +302,10 @@ def prstats():
             oldlinks += 1
             ofhist[flavor] += 1
           else:
+            csvf.write('%s, %5.1f, %s\n' % (tileobj.name, clen, flavor))
             newlen += clen
         else:
+          csvf.write('%s, %5.1f, %s\n' % (tileobj.name, clen, flavor))
           newlen += clen
 
       print "  LoS length totals: %4.3f km of copper, %4.3f km of fibre" % (cpad/1000, fpad/1000)
@@ -332,6 +342,7 @@ def prstats():
   print summary
   outf.write(summary)
   outf.close()
+  csvf.close()
 
 
 if __name__ == '__main__':
