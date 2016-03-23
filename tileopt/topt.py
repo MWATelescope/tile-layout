@@ -5,12 +5,19 @@ import time
 
 import cabplot
 
-TILEFILE = 'config-compact.txt'
+TILEFILE = 'config-compact.txt'   # Hex configuration for Q3 2016 onwards
 PADFILE = 'pads-verycompact.txt'
+
+#TILEFILE = 'config-current.txt'
+#PADFILE = 'pads-current.txt'
+
 OUTFILE = 'topt-run.txt'
 CSVFILE = 'topt-run.csv'
 
 KEEPCURRENT = True
+
+LIGHTNING = []
+BADLIGHTNING = []
 
 #Dec 2013 lightning strike
 #LIGHTNING = [47, 68, 81,83,84,85,86, 113,115,117,121,122,125,126, 131,133,136,138, 144]
@@ -26,8 +33,16 @@ KEEPCURRENT = True
 #             134, 144,148, 153, 161,162,163,164,165,166,167,168]
 #BADLIGHTNING = [74,76, 101,102,103,104, 112,117, 126, 148, 166,167,168]
 
-LIGHTNING = []
-BADLIGHTNING = []
+# March 2016 lightning strike
+#LIGHTNING = [52, 54, 55,
+#             72, 75, 76,
+#             81, 83, 84, 85, 86, 87,
+#             91, 92, 93, 94, 95, 96, 97, 98,   # 93 is intermittent
+#             111, 113,
+#             122, 128,
+#             131, 132, 133, 134,
+#             142, 144, 145, 147, 148,
+#             151, 152, 158]
 
 TILES = []
 PADS = []
@@ -40,8 +55,8 @@ FLENGTHS = [90, 150, 230, 320, 400, 524]
 FLAVORS = {90:'RG6_90', 150:'RG6_150', 230:'RG6_230', 320:'LMR400_320', 400:'LMR400_400', 524:'LMR400_524'}
 FNAMES = [FLAVORS[length] for length in FLENGTHS]
 
-LMULT = 1.0   # Multiply line-of-sight lengths by this, to determine actual cable length
-LADD = 5.0    # Add this length (in metres) to scaled line-of-sight length to determine actual cable length
+LMULT = 1.00   # Multiply line-of-sight lengths by this, to determine actual cable length
+LADD = 10.0    # Add this length (in metres) to scaled line-of-sight length to determine actual cable length
 
 DELAY = 0.05
 
@@ -465,10 +480,12 @@ if __name__ == '__main__':
           tid = tnum
           if tid in BADLIGHTNING:
             ccolor = (1.0,0.0,0.0)
+            print "%s:d bad ligtning" % (pname, tid)
           elif tid in LIGHTNING:
-            ccolor = (1.0,0.8,0.0)
-          elif len(BADLIGHTNING):
-            ccolor = (1.0,1.0,1.0)
+            ccolor = (1.0,0.3,0.0)
+            print "%s:%d lightning" % (pname, tid)
+#          elif len(BADLIGHTNING):
+#            ccolor = (1.0,1.0,1.0)
           else:
             ccolor = (1.0, 1.0, 0.0)
           PDICT[pname].addtile(tile, color=ccolor)
