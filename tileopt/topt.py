@@ -11,10 +11,16 @@ PADFILE = 'pads-verycompact.txt'
 #TILEFILE = 'config-current.txt'
 #PADFILE = 'pads-current.txt'
 
+#TILEFILE = 'config-longbaseline.txt'   # Long-baseline Phase 2 configuration
+#PADFILE = 'pads-longbaseline.txt'
+
 OUTFILE = 'topt-run.txt'
 CSVFILE = 'topt-run.csv'
 
 KEEPCURRENT = True
+
+#KEEPCURRENT = False   # Don't use KEEPCURRENT=True for long baselines, becuase it would leave the
+                      # new LB tiles connected to receivers in the core, with fibres that are too long.
 
 LIGHTNING = []
 BADLIGHTNING = []
@@ -150,7 +156,7 @@ class Pad(object):
       flavor = 'FIBRE'
 
     oldlink = False
-    if tileobj.name.startswith('Tile') or tname[0].isdigit():
+    if tileobj.name.startswith('Tile') or tileobj.name[0].isdigit():
       tnum = int(''.join([c for c in tileobj.name if c.isdigit()]))
       rnum, slotnum = divmod(tnum,10)
       oldpad = PDICT['Rx%d' % rnum]
@@ -381,12 +387,10 @@ if __name__ == '__main__':
     for tname in ['HN19', 'HN22', 'HN26', 'HN30', 'HN07', 'HN10', 'HN14', 'HN34', ]:
       pad.addtile(TDICT[tname])
 
-  elif (TILEFILE == 'config2.txt') and (('pads-compact2' in PADFILE) or ('pads-compact3' in PADFILE)):   # Extended configuration with Rx16 left on original pad
-    print "Force longer cables and Rx16 for the 8 tiles on the far side of the airstrip"
-    if 'pads-compact2' in PADFILE:
-      pad = PDICT['Rx16']
-    else:
-      pad = PDICT['Rx10']
+  elif ( (TILEFILE == 'config-longbaseline.txt') and
+         (PADFILE == 'pads-longbaseline.txt') ):   # Extended configuration with Rx16 left on original pad
+    print "Force longer cables and Rx10/Rx16 for the 8 tiles on the far side of the airstrip"
+    pad = PDICT['Rx10']
     for tname in ['LB_SW1', 'LB_SW2', 'LB_SW3', 'LB_SW4', 'LB_SW5', 'LB_SW6', 'LB_SW7', 'LB_SW8']:
       pad.addtile(TDICT[tname], fixlength=2650.0)
 

@@ -111,7 +111,7 @@ def plot(tiles=None, pads=None):
 #  aaxislabel = visual.text(text='Up', pos=(0,20,80), height=40, depth=10, color=color.blue)
 
   for tile in tiles:
-#    complist += gettile(cpos=(tile.east, tile.north, 0.0))
+    complist += gettile(cpos=(tile.east, tile.north, 0.0))
     simplist.append(visual.box(pos=(tile.east, tile.north, 0.0), axis=(0,0,1), height=5.0, width=5.0, length=0.2, color=color.green))
     simplist[-1].name = tile.name
 
@@ -129,7 +129,7 @@ def plot(tiles=None, pads=None):
     else:
       yoffset = 8
 #    pobj.label = visual.label(pos=pobj.pos, text=pad.name, xoffset=xoffset, yoffset=yoffset, box=False, line=False, opacity=0.2)
-    pobj.label = visual.text(pos=(pobj.pos.x+xoffset, pobj.pos.y+yoffset, pobj.pos.z+10), text=pad.name, height=5)
+    pobj.label = visual.label(pos=(pobj.pos.x+xoffset, pobj.pos.y+yoffset, pobj.pos.z+10), text=pad.name, height=9)
     pobj.cables = {}
     for tname, tdata in pad.inputs.items():
       tpos = visual.vector(tdata[0].east, tdata[0].north, 0.0)
@@ -203,7 +203,7 @@ def processClick(event):
         del tlabel
       seltile = ob
       seltile.color = color.red
-      tlabel = visual.text(pos=(seltile.pos.x, seltile.pos.y, seltile.pos.z+10), text=name, height=5)
+      tlabel = visual.label(pos=(seltile.pos.x, seltile.pos.y, seltile.pos.z+10), text=name, height=10)
     except AttributeError:
       pass
 
