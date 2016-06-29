@@ -1,5 +1,17 @@
 __author__ = 'andrew'
 
+"""Tile optimisation for MWA phase 2
+
+   Note - needs 'classic' VPython. Currently, under Windows, do:
+
+   conda install -c mwcraig vpython
+
+   This shouldn't conflict with the glowscript version of python (pip install vpython), because
+   the glowscript version installs as 'vpython' and classic installs as 'visual'.
+
+   Classic VPython under Linux is pretty much dead (ancient, and not being developed any more).
+"""
+
 import math
 import time
 
