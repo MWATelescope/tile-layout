@@ -1,6 +1,7 @@
 
 import visual
 from visual import color
+from visual import materials
 from visual import Polygon as P
 
 # Base object
@@ -11,6 +12,16 @@ cutout = P([(-0.315, 0.24), (-0.24, 0.315), (0.24, 0.315), (0.315, 0.24),
 straight = [(0.0, 0.0, 0.0), (0.0, 0.0, 0.065)]  # Shape will be created at (0,0,0) with this path
 
 basep = (square & circle) - cutout
+
+WIRER = 0.0025   # Radius of dipole loop wires
+PIPER = 0.01     # Radius of dipole diagonal poles
+POLER = 0.015    # Radius of central vertical conduit
+
+WIREMAT = None
+PIPEMAT = None
+POLEMAT = materials.plastic
+GMAT = materials.texture(data=materials.loadTGA('mro.tga'))
+
 
 # A single pole, with loops:
 A = (0, 0.38, 0)
@@ -52,17 +63,17 @@ Z = (0.37, 1.13, 0)
 
 def getelement(frame=None, which='E'):
   element = visual.frame(frame=frame, axis=(1,0,0))
-  pole = visual.curve(frame=element, pos=[(0,0,0), R], radius=0.02)
-  d1 = visual.curve(frame=element, pos=[A, S, T, B], radius=0.01)
-  d3 = visual.curve(frame=element, pos=[E, W, Z, F], radius=0.01)
-  d5 = visual.curve(frame=element, pos=[I, C1, D1, J], radius=0.01)
-  d7 = visual.curve(frame=element, pos=[M, G1, H1, N], radius=0.01)
-  d9 = visual.curve(frame=element, pos=[Q, K1, L1, R], radius=0.01)
+  pipe = visual.curve(frame=element, pos=[(0,0,0), R], radius=PIPER, material=PIPEMAT, color=color.gray(0.7))
+  d1 = visual.curve(frame=element, pos=[A, S, T, B], radius=WIRER, material=WIREMAT, color=color.gray(0.7))
+  d3 = visual.curve(frame=element, pos=[E, W, Z, F], radius=WIRER, material=WIREMAT, color=color.gray(0.7))
+  d5 = visual.curve(frame=element, pos=[I, C1, D1, J], radius=WIRER, material=WIREMAT, color=color.gray(0.7))
+  d7 = visual.curve(frame=element, pos=[M, G1, H1, N], radius=WIRER, material=WIREMAT, color=color.gray(0.7))
+  d9 = visual.curve(frame=element, pos=[Q, K1, L1, R], radius=WIRER, material=WIREMAT, color=color.gray(0.7))
 
-  d2 = visual.curve(frame=element, pos=[C, U, V, D], radius=0.01)
-  d4 = visual.curve(frame=element, pos=[G, A1, B1, H], radius=0.01)
-  d6 = visual.curve(frame=element, pos=[K, E1, F1, L], radius=0.01)
-  d8 = visual.curve(frame=element, pos=[O, I1, J1, P], radius=0.01)
+  d2 = visual.curve(frame=element, pos=[C, U, V, D], radius=WIRER, material=WIREMAT, color=color.gray(0.7))
+  d4 = visual.curve(frame=element, pos=[G, A1, B1, H], radius=WIRER, material=WIREMAT, color=color.gray(0.7))
+  d6 = visual.curve(frame=element, pos=[K, E1, F1, L], radius=WIRER, material=WIREMAT, color=color.gray(0.7))
+  d8 = visual.curve(frame=element, pos=[O, I1, J1, P], radius=WIRER, material=WIREMAT, color=color.gray(0.7))
 
   element.rotate(angle=visual.pi/2, axis=(1,0,0), pos=(0,0,0))
 
@@ -81,7 +92,7 @@ def getelement(frame=None, which='E'):
     element.rotate(angle=visual.pi/2, axis=(0,0,1))
     element.pos = (0.354, 0, 0)
     element.rotate(angle=-0.20184, axis=(0,1,0), pos=element.pos)
-  return element, [pole, d1, d2, d3, d4, d5, d6, d7, d8, d9]
+  return element, [pipe, d1, d2, d3, d4, d5, d6, d7, d8, d9]
 
 
 def getxmas():
@@ -91,15 +102,43 @@ def getxmas():
     ef, olist = getelement(frame=xmas, which=direction)
     elements.append(ef)
     elements.append(olist)
+  s1 = visual.curve(pos=[(-0.233,-0.233,0.59), (0.233,-0.233,0.59), (0.233,0.233,0.59),
+                     (-0.233,0.233,0.59), (-0.233,-0.233,0.59)],
+                    frame=xmas,
+                    radius=0.02,
+                    material=materials.plastic,
+                    color=color.white)
+  s2 = visual.curve(pos=[(-0.233,0,0.59), (0.233,0,0.59)],
+                    frame=xmas,
+                    radius=0.02,
+                    material=materials.plastic,
+                    color=color.white)
+  s3 = visual.curve(pos=[(0, -0.233, 0.59), (0, 0.233, 0.59)],
+                    frame=xmas,
+                    radius=0.02,
+                    material=materials.plastic,
+                    color=color.white)
+  lna = visual.box(pos=(0, 0, 1.63),
+                   frame=xmas,
+                   height=0.03, length=0.03, width=0.08,
+                   material=materials.plastic,
+                   color=color.white)
+  pole = visual.curve(pos=[(0, 0, 0.38), (0,0,1.73)], frame=xmas, radius=POLER, material=POLEMAT, color=color.white)
+  elements.append([s1, s2, s3, lna, pole])
   return xmas, elements
 
+
 apiu = visual.box(pos=(0,0,0.980/2), length=0.850, height=1.250, width=0.980, color=color.red)
+ground = visual.cylinder(pos=(0,0,-0.2), radius=20.0, axis=(0,0,0.2),
+                         material=GMAT)
+#                         color=(0.95, 0.59, 0.42))
+
 posfile = open('aavspositions.txt', 'r')
 lines = posfile.readlines()
 bases = []
 for line in lines:
   x, y = tuple(map(float, line.split()))
-  b = visual.extrusion(pos=[(x, y, 0.0), (x, y, 0.065)], shape=basep, color=color.gray(0.5))
+  b = visual.extrusion(pos=[(x, y, 0.0), (x, y, 0.065)], shape=basep, material=materials.rough, color=color.gray(0.4))
   bases.append(b)
   tree, elist = getxmas()
   tree.pos = (x, y, 0.065)
