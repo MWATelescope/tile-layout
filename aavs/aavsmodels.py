@@ -1,4 +1,23 @@
 
+"""AAVS station layout model, with APIU
+
+   Note - needs 'classic' VPython. Currently, under Windows or Mac OS/X,
+   from a command line, run:
+
+   conda install -c mwcraig vpython
+
+   Classic VPython under Linux is pretty much dead (ancient, and not being developed any more).
+
+   The Glowscript/Jupyter notebook version of visual python doesn't handle extrusions, and doesn't
+   support curves properly, so won't work at all with these models.
+
+   Controls - Right-click and drag to spin the camera around the center left/right and up/down.
+            - Both-buttons click and drag up and down to change zoom.
+            - Left click on an object in the field to center the view (and rotation) on that
+              new position.
+"""
+
+
 import visual
 from visual import color
 from visual import materials
