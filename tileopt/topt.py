@@ -17,14 +17,17 @@ import time
 
 import cabplot
 
-TILEFILE = 'config-compact.txt'   # Hex configuration for Q3 2016 onwards
-PADFILE = 'pads-verycompact.txt'
+#TILEFILE = 'config-compact.txt'   # Hex configuration for Q3 2016 onwards
+#PADFILE = 'pads-verycompact.txt'
 
 #TILEFILE = 'config-current.txt'
 #PADFILE = 'pads-current.txt'
 
-#TILEFILE = 'config-longbaseline.txt'   # Long-baseline Phase 2 configuration
-#PADFILE = 'pads-longbaseline.txt'
+# TILEFILE = 'config-longbaseline.txt'   # Long-baseline Phase 2 configuration
+TILEFILE = 'config-longbaselinenew.txt'  # Adjusted long baseline positions
+
+#PADFILE = 'pads-current.txt'
+PADFILE = 'pads-newLB.txt'
 
 OUTFILE = 'topt-run.txt'
 CSVFILE = 'topt-run.csv'
@@ -367,7 +370,7 @@ def prstats():
   summary = '\n'
   summary += "Totals for the whole array:\n"
   summary += "   LoS lengths: %4.3f km of COPPER, %4.3f km of FIBRE\n" % (ctotal/1000, ftotal/1000)
-  summary += "   %d existing tile connections re-used, %4.3f km new copper\n" % (oldlinkstotal, newtotal/1000)
+  summary += "   %d existing tile connections re-used, %4.3f km new cables.\n" % (oldlinkstotal, newtotal/1000)
   for flavor in FNAMES:
     summary += "  Cable %s: %d lengths in total, %d of them are re-used.\n" % (flavor, fhist[flavor], ofhist[flavor])
   fibrelist.sort()
@@ -399,11 +402,11 @@ if __name__ == '__main__':
     for tname in ['HN19', 'HN22', 'HN26', 'HN30', 'HN07', 'HN10', 'HN14', 'HN34', ]:
       pad.addtile(TDICT[tname])
 
-  elif ( (TILEFILE == 'config-longbaseline.txt') and
-         (PADFILE == 'pads-longbaseline.txt') ):   # Extended configuration with Rx16 left on original pad
+  elif ( ('longbaseline' in TILEFILE) and
+         ((PADFILE == 'pads-longbaseline.txt') or (PADFILE == 'pads-newLB.txt')) ):   # Extended configuration with Rx16 left on original pad
     print "Force longer cables and Rx10/Rx16 for the 8 tiles on the far side of the airstrip"
-    pad = PDICT['Rx10']
-    for tname in ['LB_SW1', 'LB_SW2', 'LB_SW3', 'LB_SW4', 'LB_SW5', 'LB_SW6', 'LB_SW7', 'LB_SW8']:
+    pad = PDICT['Rx7a']
+    for tname in ['LBSW1', 'LBSW2', 'LBSW3', 'LBSW4', 'LBSW5', 'LBSW6', 'LBSW7', 'LBSW8']:
       pad.addtile(TDICT[tname], fixlength=2650.0)
 
   elif (TILEFILE == 'config1.txt') and (PADFILE == 'pads-verycompact.txt'):
