@@ -112,7 +112,10 @@ def plot(tiles=None, pads=None):
 
   for tile in tiles:
     complist += gettile(cpos=(tile.east, tile.north, 0.0))
-    simplist.append(visual.box(pos=(tile.east, tile.north, 0.0), axis=(0,0,1), height=5.0, width=5.0, length=0.2, color=color.green))
+    tcolor = color.green
+    if tile.color is not None:
+      tcolor = tile.color
+    simplist.append(visual.box(pos=(tile.east, tile.north, 0.0), axis=(0,0,1), height=5.0, width=5.0, length=0.2, color=tcolor))
     simplist[-1].name = tile.name
 
   for pad in pads:

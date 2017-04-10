@@ -65,6 +65,28 @@ BADLIGHTNING = []
 #             142, 144, 145, 147, 148,
 #             151, 152, 158]
 
+# Jan 2017 lightning strike
+LIGHTNING = [11, 18,               # rec01
+             31, 32,               # rec02
+             1021,                 # rec03
+             1027, 1032,           # rec04
+             1057, 1063,           # rec05
+             1050, 1051, 1056,     # rec06
+             1041, 1045,           # rec07
+             1068, 1072,           # rec10
+             68,                   # rec11
+             44, 46, 48,           # rec12
+             1011, 1015, 1016,     # rec15
+             1036
+             ]
+BADLIGHTNING = [81, 82, 83, 84, 85, 86, 87, 88,   # reC08
+                91, 92, 93, 94, 95, 96, 97, 98,   # rec09
+                1004, 1005, 1006, 1008,           # rec13
+                21, 22, 23, 24, 25, 26, 47, 28    # rec14
+               ]
+TILEFILE = 'config-compact.txt'   # Hex configuration for Q3 2016 onwards
+PADFILE = 'pads-verycompact.txt'
+
 TILES = []
 PADS = []
 TDICT = {}
@@ -80,6 +102,39 @@ LMULT = 1.00   # Multiply line-of-sight lengths by this, to determine actual cab
 LADD = 10.0    # Add this length (in metres) to scaled line-of-sight length to determine actual cable length
 
 DELAY = 0.05
+
+
+def tid2name(tid=0):
+  """Given a tile ID, return the name of the tile as defined in the config-....txt file. Note that this is NOT
+     necessarily the actual tile name as used in the MWA configuration database, hence the quick hack here instead
+     of using the metadata service. Generally, this code is being run before the tiles are actually built, let alone
+     configured into the metadata.
+  """
+  if tid < 1000:
+    return '%02d' % tid
+  elif tid < 1037:
+    return 'EastHex%d' % (tid - 1000)
+  elif tid < 2000:
+    return 'SouthHex%d' % (tid - 1036)
+  else:
+    return 'Tile%d' % tid
+
+
+def name2tid(tname=''):
+  """Given a tile name as defined in the config-....txt file, return the id of the tile. Note that this is NOT
+     necessarily the actual tile name as used in the MWA configuration database, hence the quick hack here instead
+     of using the metadata service. Generally, this code is being run before the tiles are actually built, let alone
+     configured into the metadata.
+  """
+  if len(tname) == 2:
+    return int(tname)
+  elif tname.startswith('EastHex'):
+    return int(tname[7:]) + 1000
+  elif tname.startswith('SouthHex'):
+    return int(tname[8:]) + 1036
+  else:
+    return 0
+
 
 class Pad(object):
   """Represents a single receiver pad, which can handle up to 8 inputs from tiles.
@@ -181,6 +236,14 @@ class Pad(object):
     if color is None and oldlink:
       color = (1.0, 1.0, 0.0)
 
+    tid = name2tid(tileobj.name)
+    if tid in BADLIGHTNING:
+      color = (1.0, 0.0, 0.0)
+      print "%s:%d bad ligtning" % (tileobj.name, tid)
+    elif tid in LIGHTNING:
+      color = (1.0, 0.3, 0.0)
+      print "%s:%d lightning" % (tileobj.name, tid)
+
     self.inputs[tileobj.name] = (tileobj, clen, flavor)
     CONNECTED.append(tileobj.name)
     print "Connected tile %s to pad %s with cable %s (LoS=%5.1f m)" % (tileobj.name, self.name, flavor, clen)
@@ -210,6 +273,15 @@ class Tile(object):
     self.name = name
     self.east = east
     self.north = north
+    self.color = None
+    tid = name2tid(self.name)
+    if tid in BADLIGHTNING:
+      self.color = (1.0, 0.0, 0.0)
+      print "%s:%d bad ligtning" % (self.name, tid)
+    elif tid in LIGHTNING:
+      self.color = (1.0, 0.3, 0.0)
+      print "%s:%d lightning" % (self.name, tid)
+
 
 
 def bestinput(tileobj):
@@ -499,7 +571,7 @@ if __name__ == '__main__':
           tid = tnum
           if tid in BADLIGHTNING:
             ccolor = (1.0,0.0,0.0)
-            print "%s:d bad ligtning" % (pname, tid)
+            print "%s:%d bad ligtning" % (pname, tid)
           elif tid in LIGHTNING:
             ccolor = (1.0,0.3,0.0)
             print "%s:%d lightning" % (pname, tid)
