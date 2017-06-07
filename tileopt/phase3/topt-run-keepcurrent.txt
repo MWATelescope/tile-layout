@@ -1,0 +1,223 @@
+Tile optimisation run at Fri Sep 23 11:35:45 2016
+Tiles=config-longbaseline.txt, pad configuration=pads-longbaseline.txt
+
+Rx1:
+  Tile108 with FIBRE (908 m LoS)
+  Tile118 with FIBRE (1094 m LoS)
+  Tile114 with FIBRE (638 m LoS)
+  Tile111 with FIBRE (1410 m LoS)
+  Tile107 with FIBRE (921 m LoS)
+  Tile112 with FIBRE (641 m LoS)
+  Tile168 with FIBRE (650 m LoS)
+  Tile167 with FIBRE (628 m LoS)
+  Max = 1409.8, Min = 627.8, difference = 782.0
+  LoS length totals: 0.000 km of copper, 6.890 km of fibre
+  0 existing cables re-used, plus ~6.890 km of new cable
+
+Rx1a:
+  Tile116 with LMR400_524 (478 m LoS)
+  Tile115 with LMR400_524 (504 m LoS)
+  Tile101 with LMR400_524 (507 m LoS)
+  Tile106 with LMR400_524 (513 m LoS)
+  Tile113 with FIBRE (522 m LoS)
+  Tile105 with LMR400_524 (493 m LoS)
+  Tile104 with FIBRE (547 m LoS)
+   Tile73 with LMR400_524 (471 m LoS)
+  Max = 547.0, Min = 470.8, difference = 76.2
+  LoS length totals: 3.488 km of copper, 0.547 km of fibre
+  0 existing cables re-used, plus ~4.035 km of new cable
+
+Rx2:
+  Tile102 with LMR400_524 (468 m LoS)
+  Tile103 with LMR400_524 (430 m LoS)
+  Tile117 with LMR400_524 (462 m LoS)
+   Tile78 with RG6_230 (205 m LoS)
+   Tile77 with RG6_230 (214 m LoS)
+   Tile76 with LMR400_400 (313 m LoS)
+   Tile75 with LMR400_524 (399 m LoS)
+   Tile74 with LMR400_400 (377 m LoS)
+  Max = 467.7, Min = 205.5, difference = 262.2
+  LoS length totals: 2.869 km of copper, 0.000 km of fibre
+  0 existing cables re-used, plus ~2.869 km of new cable
+
+Rx3:
+    LB_E8 with FIBRE (2023 m LoS)
+    LB_E2 with FIBRE (2169 m LoS)
+  LB_NNE5 with FIBRE (2029 m LoS)
+  LB_NNE8 with FIBRE (2107 m LoS)
+    LB_E7 with FIBRE (2237 m LoS)
+  LB_ESE2 with FIBRE (2247 m LoS)
+  LB_ESE5 with FIBRE (2323 m LoS)
+  LB_ESE7 with FIBRE (2290 m LoS)
+  Max = 2323.4, Min = 2022.5, difference = 300.9
+  LoS length totals: 0.000 km of copper, 17.424 km of fibre
+  0 existing cables re-used, plus ~17.424 km of new cable
+
+Rx3a:
+    LB_N6 with FIBRE (1750 m LoS)
+  LB_NNE1 with FIBRE (1356 m LoS)
+  LB_ESE8 with FIBRE (1942 m LoS)
+    LB_E1 with FIBRE (1742 m LoS)
+  LB_ESE1 with FIBRE (1509 m LoS)
+  LB_ESE6 with FIBRE (1799 m LoS)
+  LB_ESE4 with FIBRE (1908 m LoS)
+  LB_NNE6 with FIBRE (1665 m LoS)
+  Max = 1941.5, Min = 1355.6, difference = 585.9
+  LoS length totals: 0.000 km of copper, 13.671 km of fibre
+  0 existing cables re-used, plus ~13.671 km of new cable
+
+Rx4:
+  Tile133 with FIBRE (1340 m LoS)
+  Tile132 with FIBRE (1320 m LoS)
+  Tile131 with FIBRE (1119 m LoS)
+  Tile157 with FIBRE (639 m LoS)
+  Tile155 with FIBRE (636 m LoS)
+  Tile154 with FIBRE (643 m LoS)
+  Tile162 with FIBRE (676 m LoS)
+  Tile156 with FIBRE (653 m LoS)
+  Max = 1339.6, Min = 635.7, difference = 703.9
+  LoS length totals: 0.000 km of copper, 7.025 km of fibre
+  0 existing cables re-used, plus ~7.025 km of new cable
+
+Rx4a:
+  Tile137 with FIBRE (599 m LoS)
+  Tile136 with LMR400_524 (513 m LoS)
+  Tile135 with FIBRE (573 m LoS)
+  Tile134 with FIBRE (545 m LoS)
+  Tile138 with FIBRE (556 m LoS)
+  Tile158 with FIBRE (629 m LoS)
+   Tile72 with LMR400_320 (262 m LoS)
+   Tile71 with LMR400_320 (222 m LoS)
+  Max = 628.8, Min = 222.1, difference = 406.7
+  LoS length totals: 0.996 km of copper, 2.901 km of fibre
+  0 existing cables re-used, plus ~3.897 km of new cable
+
+Rx5:
+   Tile55 with LMR400_524 (439 m LoS)
+   Tile54 with LMR400_320 (258 m LoS)
+   Tile57 with RG6_230 (156 m LoS)
+   Tile56 with RG6_150 (135 m LoS)
+   Tile51 with RG6_90 (28 m LoS)
+   Tile53 with RG6_90 (68 m LoS)
+   Tile52 with LMR400_320 (301 m LoS)
+   Tile58 with RG6_90 (15 m LoS)
+  Max = 439.2, Min = 15.0, difference = 424.2
+  LoS length totals: 1.401 km of copper, 0.000 km of fibre
+  8 existing cables re-used, plus ~0.000 km of new cable
+
+Rx6:
+   LB_SE8 with FIBRE (2890 m LoS)
+   LB_SE5 with FIBRE (1767 m LoS)
+   LB_SE4 with FIBRE (2446 m LoS)
+   LB_SE7 with FIBRE (2331 m LoS)
+   LB_SE6 with FIBRE (1713 m LoS)
+   LB_SE1 with FIBRE (1455 m LoS)
+   LB_SE3 with FIBRE (1755 m LoS)
+   LB_SE2 with FIBRE (2279 m LoS)
+  Max = 2889.6, Min = 1454.9, difference = 1434.7
+  LoS length totals: 0.000 km of copper, 16.636 km of fibre
+  0 existing cables re-used, plus ~16.636 km of new cable
+
+Rx6a:
+  Tile161 with FIBRE (612 m LoS)
+  Tile164 with FIBRE (1089 m LoS)
+  Tile151 with FIBRE (1369 m LoS)
+  Tile165 with FIBRE (951 m LoS)
+  Tile166 with FIBRE (648 m LoS)
+  Tile152 with FIBRE (1087 m LoS)
+  Tile153 with FIBRE (618 m LoS)
+  Tile163 with FIBRE (1007 m LoS)
+  Max = 1368.8, Min = 612.2, difference = 756.5
+  LoS length totals: 0.000 km of copper, 7.380 km of fibre
+  0 existing cables re-used, plus ~7.380 km of new cable
+
+Rx8:
+    LB_N8 with FIBRE (1637 m LoS)
+    LB_N7 with FIBRE (1771 m LoS)
+    LB_N5 with FIBRE (2063 m LoS)
+    LB_N2 with FIBRE (2420 m LoS)
+    LB_N3 with FIBRE (2286 m LoS)
+    LB_N1 with FIBRE (2215 m LoS)
+  LB_NNE2 with FIBRE (2047 m LoS)
+  LB_NNE7 with FIBRE (1693 m LoS)
+  Max = 2420.3, Min = 1636.7, difference = 783.6
+  LoS length totals: 0.000 km of copper, 16.133 km of fibre
+  0 existing cables re-used, plus ~16.133 km of new cable
+
+Rx9:
+   LB_NE8 with FIBRE (2759 m LoS)
+   LB_NE4 with FIBRE (3301 m LoS)
+   LB_NE5 with FIBRE (2994 m LoS)
+   LB_NE6 with FIBRE (2692 m LoS)
+   LB_NE2 with FIBRE (2972 m LoS)
+   LB_NE3 with FIBRE (3198 m LoS)
+    LB_E5 with FIBRE (2662 m LoS)
+    LB_E4 with FIBRE (3067 m LoS)
+  Max = 3301.1, Min = 2662.2, difference = 638.9
+  LoS length totals: 0.000 km of copper, 23.646 km of fibre
+  0 existing cables re-used, plus ~23.646 km of new cable
+
+Rx9a:
+  LB_ESE3 with FIBRE (2347 m LoS)
+    LB_N4 with FIBRE (2518 m LoS)
+   LB_NE7 with FIBRE (2471 m LoS)
+   LB_NE1 with FIBRE (2422 m LoS)
+    LB_E3 with FIBRE (2336 m LoS)
+    LB_E6 with FIBRE (2591 m LoS)
+  LB_NNE3 with FIBRE (2455 m LoS)
+  LB_NNE4 with FIBRE (2397 m LoS)
+  Max = 2590.7, Min = 2336.5, difference = 254.2
+  LoS length totals: 0.000 km of copper, 19.537 km of fibre
+  0 existing cables re-used, plus ~19.537 km of new cable
+
+Rx10:
+   LB_SW7 with FIBRE (2650 m LoS)
+   LB_SW6 with FIBRE (2650 m LoS)
+   LB_SW5 with FIBRE (2650 m LoS)
+   LB_SW4 with FIBRE (2650 m LoS)
+   LB_SW3 with FIBRE (2650 m LoS)
+   LB_SW2 with FIBRE (2650 m LoS)
+   LB_SW1 with FIBRE (2650 m LoS)
+   LB_SW8 with FIBRE (2650 m LoS)
+  Max = 2650.0, Min = 2650.0, difference = 0.0
+  LoS length totals: 0.000 km of copper, 21.200 km of fibre
+  0 existing cables re-used, plus ~21.200 km of new cable
+
+Rx12:
+  Tile121 with LMR400_524 (501 m LoS)
+  Tile122 with LMR400_524 (477 m LoS)
+  Tile123 with LMR400_400 (336 m LoS)
+  Tile124 with LMR400_320 (290 m LoS)
+  Tile125 with LMR400_400 (382 m LoS)
+  Tile126 with LMR400_524 (475 m LoS)
+  Tile127 with LMR400_400 (322 m LoS)
+  Tile128 with LMR400_524 (453 m LoS)
+  Max = 501.4, Min = 290.1, difference = 211.4
+  LoS length totals: 3.236 km of copper, 0.000 km of fibre
+  8 existing cables re-used, plus ~0.000 km of new cable
+
+Rx14:
+  Tile146 with LMR400_320 (242 m LoS)
+  Tile147 with LMR400_400 (318 m LoS)
+  Tile144 with LMR400_524 (486 m LoS)
+  Tile145 with LMR400_524 (423 m LoS)
+  Tile142 with LMR400_524 (504 m LoS)
+  Tile143 with LMR400_320 (280 m LoS)
+  Tile141 with LMR400_524 (474 m LoS)
+  Tile148 with LMR400_400 (357 m LoS)
+  Max = 504.1, Min = 242.3, difference = 261.8
+  LoS length totals: 3.084 km of copper, 0.000 km of fibre
+  8 existing cables re-used, plus ~0.000 km of new cable
+
+
+Totals for the whole array:
+   LoS lengths: 15.075 km of COPPER, 152.990 km of FIBRE
+   24 existing tile connections re-used, 160.344 km new copper
+  Cable RG6_90: 3 lengths in total, 3 of them are re-used.
+  Cable RG6_150: 1 lengths in total, 1 of them are re-used.
+  Cable RG6_230: 3 lengths in total, 1 of them are re-used.
+  Cable LMR400_320: 7 lengths in total, 5 of them are re-used.
+  Cable LMR400_400: 7 lengths in total, 5 of them are re-used.
+  Cable LMR400_524: 20 lengths in total, 9 of them are re-used.
+  Fibre: 87 lengths, with Line of Sight (LOS) distances:
+    [522.1198880812718, 544.9218439831532, 547.0451436810312, 555.5698673830323, 573.2164811308203, 598.5166798519487, 612.2499897403021, 617.788590967007, 627.7917020198659, 628.7669745541666, 635.6831321295225, 637.8258974336179, 639.1458357683323, 640.7468879175302, 643.420518945425, 647.935247507033, 649.8934416848658, 652.793593228365, 675.6024037590453, 907.971463497064, 921.2636493273791, 950.5400946877518, 1007.2783935387475, 1086.5124393673548, 1089.1764129524656, 1094.336016628348, 1118.761827647869, 1320.4806574929448, 1339.593932600473, 1355.5909465945101, 1368.7708864853898, 1409.8248949954743, 1454.8810191386785, 1509.2671469441716, 1636.6794511219966, 1665.1399647059704, 1693.4427846635388, 1713.1927701111163, 1741.8328471081834, 1750.2914646403894, 1755.0291862763993, 1766.927213036802, 1771.3897481765553, 1799.0440867874804, 1907.9980240097211, 1941.5268113618727, 2022.5213474930247, 2028.550182825409, 2046.714506817695, 2063.466970383582, 2106.5503150945624, 2169.210933802658, 2214.9534363414955, 2236.8414206762623, 2247.104503653535, 2279.4049187656415, 2285.6844060029366, 2289.9726398230173, 2323.3913625192376, 2331.3216953620968, 2336.4670777950205, 2347.463049976506, 2397.332925132636, 2420.2887647826237, 2421.6634256900775, 2446.083235421272, 2455.117702614276, 2470.5693649488976, 2517.569907738214, 2590.687545440592, 2650.0, 2650.0, 2650.0, 2650.0, 2650.0, 2650.0, 2650.0, 2650.0, 2662.2224191041964, 2692.2042151138908, 2758.8866005156865, 2889.564326265294, 2972.12971377361, 2994.2691654246782, 3067.1533896420965, 3198.173334028348, 3301.0856234919142]

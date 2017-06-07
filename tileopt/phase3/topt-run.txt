@@ -1,0 +1,223 @@
+Tile optimisation run at Mon May 01 10:50:10 2017
+Tiles=config-compact.txt, pad configuration=pads-verycompact.txt
+
+Rx1:
+       11 with RG6_90 (29 m LoS)
+       13 with RG6_150 (89 m LoS)
+       12 with RG6_150 (83 m LoS)
+       15 with RG6_150 (91 m LoS)
+       14 with RG6_150 (98 m LoS)
+       17 with RG6_150 (85 m LoS)
+       16 with RG6_90 (76 m LoS)
+       18 with RG6_90 (46 m LoS)
+  Max = 98.5, Min = 29.0, difference = 69.4
+  LoS length totals: 0.597 km of copper, 0.000 km of fibre
+  8 existing cables re-used, plus ~0.000 km of new cable
+
+Rx1a:
+       61 with RG6_150 (82 m LoS)
+       62 with RG6_150 (83 m LoS)
+       63 with RG6_150 (99 m LoS)
+       64 with RG6_150 (99 m LoS)
+       65 with RG6_150 (102 m LoS)
+       66 with RG6_150 (108 m LoS)
+       67 with RG6_150 (118 m LoS)
+       68 with RG6_150 (131 m LoS)
+  Max = 131.0, Min = 81.8, difference = 49.3
+  LoS length totals: 0.822 km of copper, 0.000 km of fibre
+  0 existing cables re-used, plus ~0.822 km of new cable
+
+Rx2:
+       27 with RG6_150 (102 m LoS)
+       48 with RG6_230 (163 m LoS)
+       46 with RG6_230 (155 m LoS)
+       44 with RG6_150 (133 m LoS)
+       45 with RG6_150 (126 m LoS)
+       42 with RG6_150 (118 m LoS)
+       43 with RG6_150 (109 m LoS)
+       41 with RG6_150 (110 m LoS)
+  Max = 163.2, Min = 101.5, difference = 61.7
+  LoS length totals: 1.015 km of copper, 0.000 km of fibre
+  1 existing cables re-used, plus ~0.913 km of new cable
+
+Rx2a:
+       38 with RG6_150 (127 m LoS)
+       33 with RG6_150 (138 m LoS)
+       32 with RG6_230 (157 m LoS)
+       31 with RG6_230 (163 m LoS)
+       37 with RG6_150 (117 m LoS)
+       36 with RG6_150 (107 m LoS)
+       35 with RG6_150 (112 m LoS)
+       34 with RG6_150 (124 m LoS)
+  Max = 163.0, Min = 107.1, difference = 55.8
+  LoS length totals: 1.046 km of copper, 0.000 km of fibre
+  0 existing cables re-used, plus ~1.046 km of new cable
+
+Rx3:
+  EastHex10 with RG6_90 (71 m LoS)
+  EastHex11 with RG6_150 (85 m LoS)
+  EastHex12 with RG6_150 (98 m LoS)
+  EastHex13 with RG6_150 (112 m LoS)
+  EastHex14 with RG6_150 (125 m LoS)
+  EastHex15 with RG6_150 (139 m LoS)
+  EastHex16 with RG6_90 (61 m LoS)
+  EastHex9 with RG6_150 (135 m LoS)
+  Max = 139.2, Min = 61.3, difference = 77.9
+  LoS length totals: 0.827 km of copper, 0.000 km of fibre
+  0 existing cables re-used, plus ~0.827 km of new cable
+
+Rx3a:
+  EastHex17 with RG6_90 (75 m LoS)
+  EastHex18 with RG6_150 (89 m LoS)
+  EastHex19 with RG6_150 (117 m LoS)
+  EastHex23 with RG6_150 (81 m LoS)
+  EastHex22 with RG6_90 (67 m LoS)
+  EastHex24 with RG6_150 (95 m LoS)
+  EastHex21 with RG6_230 (145 m LoS)
+  EastHex20 with RG6_150 (131 m LoS)
+  Max = 144.6, Min = 67.0, difference = 77.6
+  LoS length totals: 0.799 km of copper, 0.000 km of fibre
+  0 existing cables re-used, plus ~0.799 km of new cable
+
+Rx4:
+  EastHex29 with RG6_150 (89 m LoS)
+  EastHex28 with RG6_90 (75 m LoS)
+  EastHex32 with RG6_150 (130 m LoS)
+  EastHex30 with RG6_150 (103 m LoS)
+  EastHex31 with RG6_150 (117 m LoS)
+  EastHex25 with RG6_150 (109 m LoS)
+  EastHex27 with RG6_150 (137 m LoS)
+  EastHex26 with RG6_150 (123 m LoS)
+  Max = 137.0, Min = 74.9, difference = 62.1
+  LoS length totals: 0.882 km of copper, 0.000 km of fibre
+  0 existing cables re-used, plus ~0.882 km of new cable
+
+Rx4a:
+  SouthHex3 with RG6_90 (77 m LoS)
+  EastHex33 with RG6_150 (84 m LoS)
+  SouthHex4 with RG6_150 (81 m LoS)
+  EastHex36 with RG6_150 (125 m LoS)
+  SouthHex2 with RG6_90 (76 m LoS)
+  SouthHex1 with RG6_90 (78 m LoS)
+  EastHex35 with RG6_150 (112 m LoS)
+  EastHex34 with RG6_150 (98 m LoS)
+  Max = 125.2, Min = 76.5, difference = 48.8
+  LoS length totals: 0.732 km of copper, 0.000 km of fibre
+  0 existing cables re-used, plus ~0.732 km of new cable
+
+Rx5:
+  SouthHex9 with RG6_150 (140 m LoS)
+  SouthHex8 with RG6_150 (126 m LoS)
+  SouthHex7 with RG6_150 (113 m LoS)
+  SouthHex6 with RG6_150 (100 m LoS)
+  SouthHex5 with RG6_150 (87 m LoS)
+  SouthHex12 with RG6_150 (103 m LoS)
+  SouthHex11 with RG6_150 (89 m LoS)
+  SouthHex10 with RG6_90 (76 m LoS)
+  Max = 139.8, Min = 76.1, difference = 63.7
+  LoS length totals: 0.835 km of copper, 0.000 km of fibre
+  0 existing cables re-used, plus ~0.835 km of new cable
+
+Rx5a:
+  SouthHex19 with RG6_150 (121 m LoS)
+  SouthHex18 with RG6_150 (94 m LoS)
+  SouthHex17 with RG6_90 (80 m LoS)
+  SouthHex16 with RG6_90 (66 m LoS)
+  SouthHex15 with RG6_230 (144 m LoS)
+  SouthHex14 with RG6_150 (130 m LoS)
+  SouthHex13 with RG6_150 (116 m LoS)
+  SouthHex20 with RG6_150 (135 m LoS)
+  Max = 143.9, Min = 66.0, difference = 77.9
+  LoS length totals: 0.886 km of copper, 0.000 km of fibre
+  0 existing cables re-used, plus ~0.886 km of new cable
+
+Rx6:
+  SouthHex26 with RG6_150 (128 m LoS)
+  SouthHex27 with RG6_230 (142 m LoS)
+  SouthHex24 with RG6_150 (100 m LoS)
+  SouthHex25 with RG6_150 (114 m LoS)
+  SouthHex22 with RG6_90 (72 m LoS)
+  SouthHex23 with RG6_150 (86 m LoS)
+  SouthHex21 with RG6_230 (149 m LoS)
+  SouthHex28 with RG6_90 (79 m LoS)
+  Max = 149.2, Min = 71.6, difference = 77.6
+  LoS length totals: 0.868 km of copper, 0.000 km of fibre
+  0 existing cables re-used, plus ~0.868 km of new cable
+
+Rx6a:
+  SouthHex35 with RG6_150 (116 m LoS)
+  SouthHex34 with RG6_150 (102 m LoS)
+  SouthHex36 with RG6_150 (130 m LoS)
+  SouthHex31 with RG6_150 (121 m LoS)
+  SouthHex30 with RG6_150 (107 m LoS)
+  SouthHex33 with RG6_150 (89 m LoS)
+  SouthHex32 with RG6_150 (135 m LoS)
+  SouthHex29 with RG6_150 (93 m LoS)
+  Max = 135.0, Min = 88.6, difference = 46.4
+  LoS length totals: 0.892 km of copper, 0.000 km of fibre
+  0 existing cables re-used, plus ~0.892 km of new cable
+
+Rx8:
+       88 with RG6_90 (46 m LoS)
+       82 with RG6_150 (127 m LoS)
+       83 with RG6_230 (207 m LoS)
+       81 with RG6_230 (167 m LoS)
+       86 with RG6_230 (188 m LoS)
+       87 with RG6_230 (171 m LoS)
+       84 with RG6_230 (198 m LoS)
+       85 with RG6_230 (177 m LoS)
+  Max = 207.4, Min = 45.6, difference = 161.8
+  LoS length totals: 1.281 km of copper, 0.000 km of fibre
+  8 existing cables re-used, plus ~0.000 km of new cable
+
+Rx8a:
+       24 with RG6_230 (199 m LoS)
+       25 with RG6_230 (208 m LoS)
+       26 with RG6_230 (208 m LoS)
+       21 with RG6_230 (172 m LoS)
+       22 with RG6_230 (174 m LoS)
+       23 with RG6_230 (176 m LoS)
+       47 with LMR400_320 (225 m LoS)
+       28 with RG6_230 (144 m LoS)
+  Max = 225.0, Min = 144.2, difference = 80.7
+  LoS length totals: 1.505 km of copper, 0.000 km of fibre
+  0 existing cables re-used, plus ~1.505 km of new cable
+
+Rx9:
+       98 with RG6_230 (163 m LoS)
+       91 with LMR400_320 (286 m LoS)
+       93 with RG6_150 (107 m LoS)
+       92 with RG6_230 (186 m LoS)
+       95 with RG6_230 (152 m LoS)
+       94 with RG6_230 (147 m LoS)
+       97 with RG6_230 (183 m LoS)
+       96 with RG6_150 (117 m LoS)
+  Max = 286.5, Min = 106.8, difference = 179.7
+  LoS length totals: 1.342 km of copper, 0.000 km of fibre
+  8 existing cables re-used, plus ~0.000 km of new cable
+
+Rx9a:
+  EastHex8 with RG6_150 (93 m LoS)
+  EastHex2 with RG6_90 (74 m LoS)
+  EastHex3 with RG6_90 (79 m LoS)
+  EastHex1 with RG6_90 (72 m LoS)
+  EastHex6 with RG6_150 (84 m LoS)
+  EastHex7 with RG6_150 (87 m LoS)
+  EastHex4 with RG6_150 (86 m LoS)
+  EastHex5 with RG6_150 (83 m LoS)
+  Max = 92.6, Min = 71.5, difference = 21.1
+  LoS length totals: 0.658 km of copper, 0.000 km of fibre
+  0 existing cables re-used, plus ~0.658 km of new cable
+
+
+Totals for the whole array:
+   LoS lengths: 14.988 km of COPPER, 0.000 km of FIBRE
+   25 existing tile connections re-used, 11.666 km new cables.
+  Cable RG6_90: 20 lengths in total, 4 of them are re-used.
+  Cable RG6_150: 80 lengths in total, 9 of them are re-used.
+  Cable RG6_230: 26 lengths in total, 11 of them are re-used.
+  Cable LMR400_320: 2 lengths in total, 1 of them are re-used.
+  Cable LMR400_400: 0 lengths in total, 0 of them are re-used.
+  Cable LMR400_524: 0 lengths in total, 0 of them are re-used.
+  Fibre: 0 lengths, with Line of Sight (LOS) distances:
+    []
