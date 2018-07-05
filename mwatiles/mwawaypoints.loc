@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <loc version="1.0" src="Groundspeak">
+
+   <waypoint>
+      <name id="Rec01">Rec01</name>
+      <coord lat="-26.701002" lon="116.669141"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec02">Rec02</name>
+      <coord lat="-26.701003" lon="116.669241"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec03">Rec03</name>
+      <coord lat="-26.701193" lon="116.671000"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec04">Rec04</name>
+      <coord lat="-26.701193" lon="116.671101"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec05">Rec05</name>
+      <coord lat="-26.702332" lon="116.669982"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec06">Rec06</name>
+      <coord lat="-26.702332" lon="116.670083"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec07">Rec07</name>
+      <coord lat="-26.701969" lon="116.667379"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec08">Rec08</name>
+      <coord lat="-26.699498" lon="116.668589"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec09">Rec09</name>
+      <coord lat="-26.700106" lon="116.671764"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec10">Rec10</name>
+      <coord lat="-26.700490" lon="116.664217"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec11">Rec11</name>
+      <coord lat="-26.692684" lon="116.666386"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec12">Rec12</name>
+      <coord lat="-26.693470" lon="116.674136"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec13">Rec13</name>
+      <coord lat="-26.698717" lon="116.678984"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec14">Rec14</name>
+      <coord lat="-26.705014" lon="116.678603"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec15">Rec15</name>
+      <coord lat="-26.709355" lon="116.674439"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="Rec16">Rec16</name>
+      <coord lat="-26.709141" lon="116.665765"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T101">T101</name>
+      <coord lat="-26.697634" lon="116.665585"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T102">T102</name>
+      <coord lat="-26.697886" lon="116.665867"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T103">T103</name>
+      <coord lat="-26.699597" lon="116.665007"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T104">T104</name>
+      <coord lat="-26.704258" lon="116.664905"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T105">T105</name>
+      <coord lat="-26.702058" lon="116.664224"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T106">T106</name>
+      <coord lat="-26.701427" lon="116.663907"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T107">T107</name>
+      <coord lat="-26.702557" lon="116.659943"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T108">T108</name>
+      <coord lat="-26.698158" lon="116.660481"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T11">T11</name>
+      <coord lat="-26.700943" lon="116.669285"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T111">T111</name>
+      <coord lat="-26.688355" lon="116.667437"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T112">T112</name>
+      <coord lat="-26.695237" lon="116.668508"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T113">T113</name>
+      <coord lat="-26.696288" lon="116.669045"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T114">T114</name>
+      <coord lat="-26.695292" lon="116.668208"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T115">T115</name>
+      <coord lat="-26.696457" lon="116.668831"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T116">T116</name>
+      <coord lat="-26.696739" lon="116.668282"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T117">T117</name>
+      <coord lat="-26.696986" lon="116.667769"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T118">T118</name>
+      <coord lat="-26.693523" lon="116.661853"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T12">T12</name>
+      <coord lat="-26.700904" lon="116.669832"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T121">T121</name>
+      <coord lat="-26.690660" lon="116.677988"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T122">T122</name>
+      <coord lat="-26.697762" lon="116.673684"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T123">T123</name>
+      <coord lat="-26.696407" lon="116.673184"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T124">T124</name>
+      <coord lat="-26.695944" lon="116.673080"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T125">T125</name>
+      <coord lat="-26.695985" lon="116.671407"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T126">T126</name>
+      <coord lat="-26.696027" lon="116.670199"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T127">T127</name>
+      <coord lat="-26.694767" lon="116.671144"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T128">T128</name>
+      <coord lat="-26.690596" lon="116.670800"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T13">T13</name>
+      <coord lat="-26.700941" lon="116.669901"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T131">T131</name>
+      <coord lat="-26.694406" lon="116.679229"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T132">T132</name>
+      <coord lat="-26.695593" lon="116.682619"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T133">T133</name>
+      <coord lat="-26.698348" lon="116.683989"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T134">T134</name>
+      <coord lat="-26.701135" lon="116.676378"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T135">T135</name>
+      <coord lat="-26.700100" lon="116.676533"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T136">T136</name>
+      <coord lat="-26.699507" lon="116.675702"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T137">T137</name>
+      <coord lat="-26.698476" lon="116.676101"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T138">T138</name>
+      <coord lat="-26.697450" lon="116.674619"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T14">T14</name>
+      <coord lat="-26.701010" lon="116.669999"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T141">T141</name>
+      <coord lat="-26.701972" lon="116.681852"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T142">T142</name>
+      <coord lat="-26.707342" lon="116.682858"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T143">T143</name>
+      <coord lat="-26.705730" lon="116.675800"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T144">T144</name>
+      <coord lat="-26.703784" lon="116.673816"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T145">T145</name>
+      <coord lat="-26.703688" lon="116.674514"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T146">T146</name>
+      <coord lat="-26.704164" lon="116.676259"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T147">T147</name>
+      <coord lat="-26.703371" lon="116.675882"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T148">T148</name>
+      <coord lat="-26.702660" lon="116.676052"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T15">T15</name>
+      <coord lat="-26.701100" lon="116.669917"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T151">T151</name>
+      <coord lat="-26.712707" lon="116.677359"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T152">T152</name>
+      <coord lat="-26.710880" lon="116.675241"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T153">T153</name>
+      <coord lat="-26.707902" lon="116.670199"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T154">T154</name>
+      <coord lat="-26.706997" lon="116.671162"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T155">T155</name>
+      <coord lat="-26.706572" lon="116.673130"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T156">T156</name>
+      <coord lat="-26.706649" lon="116.673382"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T157">T157</name>
+      <coord lat="-26.706216" lon="116.674062"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T158">T158</name>
+      <coord lat="-26.706106" lon="116.674067"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T16">T16</name>
+      <coord lat="-26.701139" lon="116.669762"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T161">T161</name>
+      <coord lat="-26.707034" lon="116.666646"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T162">T162</name>
+      <coord lat="-26.707135" lon="116.669364"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T163">T163</name>
+      <coord lat="-26.710718" lon="116.665965"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T164">T164</name>
+      <coord lat="-26.711137" lon="116.665007"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T165">T165</name>
+      <coord lat="-26.709107" lon="116.664018"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T166">T166</name>
+      <coord lat="-26.705554" lon="116.664446"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T167">T167</name>
+      <coord lat="-26.704870" lon="116.664428"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T168">T168</name>
+      <coord lat="-26.705667" lon="116.665078"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T17">T17</name>
+      <coord lat="-26.701156" lon="116.669852"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T18">T18</name>
+      <coord lat="-26.701354" lon="116.669300"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T21">T21</name>
+      <coord lat="-26.700792" lon="116.669454"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T22">T22</name>
+      <coord lat="-26.700856" lon="116.669385"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T23">T23</name>
+      <coord lat="-26.700771" lon="116.669547"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T24">T24</name>
+      <coord lat="-26.700803" lon="116.669857"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T25">T25</name>
+      <coord lat="-26.700790" lon="116.670008"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T26">T26</name>
+      <coord lat="-26.700837" lon="116.669951"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T27">T27</name>
+      <coord lat="-26.700882" lon="116.670017"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T28">T28</name>
+      <coord lat="-26.700726" lon="116.669022"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T31">T31</name>
+      <coord lat="-26.701523" lon="116.670553"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T32">T32</name>
+      <coord lat="-26.701335" lon="116.670551"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T33">T33</name>
+      <coord lat="-26.701220" lon="116.670383"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T34">T34</name>
+      <coord lat="-26.701198" lon="116.670242"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T35">T35</name>
+      <coord lat="-26.701079" lon="116.670138"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T36">T36</name>
+      <coord lat="-26.701001" lon="116.670086"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T37">T37</name>
+      <coord lat="-26.700962" lon="116.670187"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T38">T38</name>
+      <coord lat="-26.700955" lon="116.670281"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T41">T41</name>
+      <coord lat="-26.700895" lon="116.670107"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T42">T42</name>
+      <coord lat="-26.700888" lon="116.670187"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T43">T43</name>
+      <coord lat="-26.700826" lon="116.670078"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T44">T44</name>
+      <coord lat="-26.700876" lon="116.670332"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T45">T45</name>
+      <coord lat="-26.700849" lon="116.670256"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T46">T46</name>
+      <coord lat="-26.700962" lon="116.670562"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T47">T47</name>
+      <coord lat="-26.700776" lon="116.670236"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T48">T48</name>
+      <coord lat="-26.700870" lon="116.670640"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T51">T51</name>
+      <coord lat="-26.702216" lon="116.670232"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T52">T52</name>
+      <coord lat="-26.703733" lon="116.672573"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T53">T53</name>
+      <coord lat="-26.702647" lon="116.670572"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T54">T54</name>
+      <coord lat="-26.704069" lon="116.671712"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T55">T55</name>
+      <coord lat="-26.705688" lon="116.672334"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T56">T56</name>
+      <coord lat="-26.703544" lon="116.670111"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T57">T57</name>
+      <coord lat="-26.703702" lon="116.669604"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T58">T58</name>
+      <coord lat="-26.702212" lon="116.669911"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T61">T61</name>
+      <coord lat="-26.701382" lon="116.669732"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T62">T62</name>
+      <coord lat="-26.701265" lon="116.669800"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T63">T63</name>
+      <coord lat="-26.701272" lon="116.669968"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T64">T64</name>
+      <coord lat="-26.701193" lon="116.669991"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T65">T65</name>
+      <coord lat="-26.701113" lon="116.670035"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T66">T66</name>
+      <coord lat="-26.701213" lon="116.670076"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T67">T67</name>
+      <coord lat="-26.701275" lon="116.670161"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T68">T68</name>
+      <coord lat="-26.701340" lon="116.670281"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T71">T71</name>
+      <coord lat="-26.701629" lon="116.668821"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T72">T72</name>
+      <coord lat="-26.702483" lon="116.668799"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T73">T73</name>
+      <coord lat="-26.705112" lon="116.667932"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T74">T74</name>
+      <coord lat="-26.703739" lon="116.666890"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T75">T75</name>
+      <coord lat="-26.703486" lon="116.666242"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T76">T76</name>
+      <coord lat="-26.701671" lon="116.666080"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T77">T77</name>
+      <coord lat="-26.701690" lon="116.667128"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T78">T78</name>
+      <coord lat="-26.700937" lon="116.667076"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T81">T81</name>
+      <coord lat="-26.698169" lon="116.669178"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T82">T82</name>
+      <coord lat="-26.700179" lon="116.669504"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T83">T83</name>
+      <coord lat="-26.700689" lon="116.670089"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T84">T84</name>
+      <coord lat="-26.700659" lon="116.669999"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T85">T85</name>
+      <coord lat="-26.700626" lon="116.669746"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T86">T86</name>
+      <coord lat="-26.700735" lon="116.669784"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T87">T87</name>
+      <coord lat="-26.699993" lon="116.666817"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T88">T88</name>
+      <coord lat="-26.699829" lon="116.668142"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T91">T91</name>
+      <coord lat="-26.701504" lon="116.674067"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T92">T92</name>
+      <coord lat="-26.701595" lon="116.672533"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T93">T93</name>
+      <coord lat="-26.700699" lon="116.670765"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T94">T94</name>
+      <coord lat="-26.700748" lon="116.670322"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T95">T95</name>
+      <coord lat="-26.700671" lon="116.670226"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T96">T96</name>
+      <coord lat="-26.700174" lon="116.670451"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T97">T97</name>
+      <coord lat="-26.698503" lon="116.671294"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="T98">T98</name>
+      <coord lat="-26.698657" lon="116.671643"/>
+      <type>Waypoint</type>
+   </waypoint>
+
+   <waypoint>
+      <name id="TAAVS-79">TAAVS-79</name>
+      <coord lat="-26.700711" lon="116.666038"/>
+      <type>Waypoint</type>
+   </waypoint>
+</loc>

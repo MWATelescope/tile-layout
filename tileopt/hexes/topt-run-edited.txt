@@ -1,0 +1,181 @@
+Tile optimisation run at Mon May 16 16:01:11 2016
+Tiles=config-compact.txt, pad configuration=pads-verycompact.txt
+
+Edited to conform to changes in rec movements as in Brian's email on 2016/07/25
+
+Rx1:   Do not touch, all cables remain as-is
+       11 with RG6_90 (29 m LoS)
+       12 with RG6_150 (83 m LoS)
+       13 with RG6_150 (89 m LoS)
+       14 with RG6_150 (98 m LoS)
+       15 with RG6_150 (91 m LoS)
+       16 with RG6_90 (76 m LoS)
+       17 with RG6_150 (85 m LoS)
+       18 with RG6_90 (46 m LoS)
+  8 existing cables re-used, plus ~0.000 km of new cable
+
+Rx1a:  (from rec11)
+       61 with RG6_150 (82 m LoS)
+       62 with RG6_150 (83 m LoS)
+       63 with RG6_150 (99 m LoS)
+       64 with RG6_150 (99 m LoS)
+       65 with RG6_150 (102 m LoS)
+       66 with RG6_150 (108 m LoS)
+       67 with RG6_150 (118 m LoS)
+       68 with RG6_150 (131 m LoS)
+  0 existing cables re-used, plus ~0.822 km of new cable
+
+Rx2:
+       41 with RG6_150 (110 m LoS)
+       42 with RG6_150 (118 m LoS)
+       43 with RG6_150 (109 m LoS)
+       44 with RG6_150 (133 m LoS)
+       45 with RG6_150 (126 m LoS)
+       46 with RG6_230 (155 m LoS)
+       27 with RG6_150 (102 m LoS)
+       48 with RG6_230 (163 m LoS)
+  1 existing cables re-used, plus ~0.913 km of new cable
+
+Rx2a:  (from rec12, goes back to original pad in LB mode)
+       31 with RG6_230 (163 m LoS)
+       32 with RG6_230 (157 m LoS)
+       33 with RG6_150 (138 m LoS)
+       34 with RG6_150 (124 m LoS)
+       35 with RG6_150 (112 m LoS)
+       36 with RG6_150 (107 m LoS)
+       37 with RG6_150 (117 m LoS)
+       38 with RG6_150 (127 m LoS)
+  0 existing cables re-used, plus ~1.046 km of new cable
+
+Rx3:
+  EastHex9 with RG6_150 (135 m LoS)
+  EastHex10 with RG6_90 (71 m LoS)
+  EastHex11 with RG6_150 (85 m LoS)
+  EastHex12 with RG6_150 (98 m LoS)
+  EastHex13 with RG6_150 (112 m LoS)
+  EastHex14 with RG6_150 (125 m LoS)
+  EastHex15 with RG6_150 (139 m LoS)
+  EastHex16 with RG6_90 (61 m LoS)
+  0 existing cables re-used, plus ~0.827 km of new cable
+
+Rx3a: (from rec15)
+  EastHex17 with RG6_90 (75 m LoS)
+  EastHex18 with RG6_150 (89 m LoS)
+  EastHex19 with RG6_150 (117 m LoS)
+  EastHex20 with RG6_150 (131 m LoS)
+  EastHex21 with RG6_230 (145 m LoS)
+  EastHex22 with RG6_90 (67 m LoS)
+  EastHex23 with RG6_150 (81 m LoS)
+  EastHex24 with RG6_150 (95 m LoS)
+  0 existing cables re-used, plus ~0.799 km of new cable
+
+Rx4:
+  EastHex25 with RG6_150 (109 m LoS)
+  EastHex26 with RG6_150 (123 m LoS)
+  EastHex27 with RG6_150 (137 m LoS)
+  EastHex28 with RG6_90 (75 m LoS)
+  EastHex29 with RG6_150 (89 m LoS)
+  EastHex30 with RG6_150 (103 m LoS)
+  EastHex31 with RG6_150 (117 m LoS)
+  EastHex32 with RG6_150 (130 m LoS)
+  0 existing cables re-used, plus ~0.882 km of new cable
+
+Rx4a:  (from rec16)
+  EastHex33 with RG6_150 (84 m LoS)
+  EastHex34 with RG6_150 (98 m LoS)
+  EastHex35 with RG6_150 (112 m LoS)
+  EastHex36 with RG6_150 (125 m LoS)
+  SouthHex1 with RG6_90 (78 m LoS)
+  SouthHex2 with RG6_90 (76 m LoS)
+  SouthHex3 with RG6_90 (77 m LoS)
+  SouthHex4 with RG6_150 (81 m LoS)
+  0 existing cables re-used, plus ~0.732 km of new cable
+
+Rx5:
+  SouthHex5 with RG6_150 (87 m LoS)
+  SouthHex6 with RG6_150 (100 m LoS)
+  SouthHex7 with RG6_150 (113 m LoS)
+  SouthHex8 with RG6_150 (126 m LoS)
+  SouthHex9 with RG6_150 (140 m LoS)
+  SouthHex10 with RG6_90 (76 m LoS)
+  SouthHex11 with RG6_150 (89 m LoS)
+  SouthHex12 with RG6_150 (103 m LoS)
+  0 existing cables re-used, plus ~0.835 km of new cable
+
+Rx5a:  (from rec10, goes back to original pad in LB mode)
+  SouthHex13 with RG6_150 (116 m LoS)
+  SouthHex14 with RG6_150 (130 m LoS)
+  SouthHex15 with RG6_230 (144 m LoS)
+  SouthHex16 with RG6_90 (66 m LoS)
+  SouthHex17 with RG6_90 (80 m LoS)
+  SouthHex18 with RG6_150 (94 m LoS)
+  SouthHex19 with RG6_150 (121 m LoS)
+  SouthHex20 with RG6_150 (135 m LoS)
+  0 existing cables re-used, plus ~0.886 km of new cable
+
+Rx6:
+  SouthHex21 with RG6_230 (149 m LoS)
+  SouthHex22 with RG6_90 (72 m LoS)
+  SouthHex23 with RG6_150 (86 m LoS)
+  SouthHex24 with RG6_150 (100 m LoS)
+  SouthHex25 with RG6_150 (114 m LoS)
+  SouthHex26 with RG6_150 (128 m LoS)
+  SouthHex27 with RG6_230 (142 m LoS)
+  SouthHex28 with RG6_90 (79 m LoS)
+  0 existing cables re-used, plus ~0.868 km of new cable
+
+Rx6a:  (from rec07)
+  SouthHex29 with RG6_150 (93 m LoS)
+  SouthHex30 with RG6_150 (107 m LoS)
+  SouthHex31 with RG6_150 (121 m LoS)
+  SouthHex32 with RG6_150 (135 m LoS)
+  SouthHex33 with RG6_150 (89 m LoS)
+  SouthHex34 with RG6_150 (102 m LoS)
+  SouthHex35 with RG6_150 (116 m LoS)
+  SouthHex36 with RG6_150 (130 m LoS)
+  0 existing cables re-used, plus ~0.892 km of new cable
+
+Rx8:  Do not touch, all cables remain as-is
+       81 with RG6_230 (167 m LoS)
+       82 with RG6_150 (127 m LoS)
+       83 with RG6_230 (207 m LoS)
+       84 with RG6_230 (198 m LoS)
+       85 with RG6_230 (177 m LoS)
+       86 with RG6_230 (188 m LoS)
+       87 with RG6_230 (171 m LoS)
+       88 with RG6_90 (46 m LoS)
+  8 existing cables re-used, plus ~0.000 km of new cable
+
+Rx8a:  (from rec14, goes back to original pad in LB mode)
+       21 with RG6_230 (172 m LoS)
+       22 with RG6_230 (174 m LoS)
+       23 with RG6_230 (176 m LoS)
+       24 with RG6_230 (199 m LoS)
+       25 with RG6_230 (208 m LoS)
+       26 with RG6_230 (208 m LoS)
+       47 with LMR400_320 (225 m LoS)
+       28 with RG6_230 (144 m LoS)
+  0 existing cables re-used, plus ~1.505 km of new cable
+
+Rx9:  Do not touch, all cables remain as-is
+       91 with LMR400_320 (286 m LoS)
+       92 with RG6_230 (186 m LoS)
+       93 with RG6_150 (107 m LoS)
+       94 with RG6_230 (147 m LoS)
+       95 with RG6_230 (152 m LoS)
+       96 with RG6_150 (117 m LoS)
+       97 with RG6_230 (183 m LoS)
+       98 with RG6_230 (163 m LoS)
+  8 existing cables re-used, plus ~0.000 km of new cable
+
+Rx9a: (from rec13)
+  EastHex1 with RG6_90 (72 m LoS)
+  EastHex2 with RG6_90 (74 m LoS)
+  EastHex3 with RG6_90 (79 m LoS)
+  EastHex4 with RG6_150 (86 m LoS)
+  EastHex5 with RG6_150 (83 m LoS)
+  EastHex6 with RG6_150 (84 m LoS)
+  EastHex7 with RG6_150 (87 m LoS)
+  EastHex8 with RG6_150 (93 m LoS)
+  0 existing cables re-used, plus ~0.658 km of new cable
+
